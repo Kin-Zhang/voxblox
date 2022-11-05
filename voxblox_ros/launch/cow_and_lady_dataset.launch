@@ -21,7 +21,7 @@
     <param name="verbose" value="true" />
     <remap from="transform" to="/kinect/vrpn_client/estimated_transform" />
     <rosparam file="$(find voxblox_ros)/cfg/cow_and_lady.yaml"/>
-    <param name="mesh_filename" value="$(find voxblox_ros)/mesh_results/$(anon cow).ply" />
+    <param name="mesh_filename" value="/home/kin/bags/$(anon cow).ply" />
   </node>
 
 </launch>

@@ -31,7 +31,15 @@ docker run -it --net=host --gpus all --name voxblox_ros -v /home/kin/bags:/home/
 ## RUN
 after the link folder, you can directly build and run the launch
 ```bash
-cd ~/catkin_ws/src/voxblox && git pull
-cd ~/catkin_ws && source devel/setup.zsh
+cd ~/catkin_ws/src/voxblox && git pull origin master
+cd ~/catkin_ws && catkin build voxblox_ros && source devel/setup.zsh
 roslaunch voxblox_ros cow_and_lady_dataset.launch
+```
+
+Save the mesh result and save location can be mofitied from the launch :
+```bash
+<param name="mesh_filename" value="/home/kin/bag/$(anon cow).ply" />
+```
+```bash
+rosservice call /voxblox_node/save_map
 ```

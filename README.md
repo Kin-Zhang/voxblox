@@ -43,3 +43,6 @@ Save the mesh result and save location can be mofitied from the launch :
 ```bash
 rosservice call /voxblox_node/save_map
 ```
+
+Result example screenshot(use meshlab/rviz):
+![](docs/example.png)
